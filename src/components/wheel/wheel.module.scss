@@ -1,0 +1,100 @@
+.wheel {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.wheel__circle {
+  inline-size: 100%;
+  block-size: 100%;
+  box-shadow: 0px 0px 51px 0 #0E1155;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.wheel__carousel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background-image: url('./../../assets/wheel/wheel-sections.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition-duration: 10s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1.1);
+}
+
+.wheel__arrow {
+  position: absolute;
+  top: -15%;
+  inset-inline: 0;
+  margin-inline: auto;
+  z-index: 2;
+}
+
+.wheel__center {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.wheel__item {
+  display: flex;
+  inline-size: auto;
+  block-size: 50%;
+  inset-block-start: 0;
+  padding-block-start: 80px;
+  position: absolute;
+  box-sizing: border-box;
+  transform-origin: 50% 100%;
+  &:nth-of-type(2) {
+    rotate: 45deg;
+  }
+  &:nth-of-type(3) {
+    rotate: 90deg;
+  }
+  &:nth-of-type(4) {
+    rotate: 135deg;
+  }
+  &:nth-of-type(5) {
+    rotate: 180deg;
+  }
+  &:nth-of-type(6) {
+    rotate: 225deg;
+  }
+  &:nth-of-type(7) {
+    rotate: 270deg;
+  }
+  &:nth-of-type(8) {
+    rotate: 315deg;
+  }
+}
+
+@media (width < 768px) {
+  .wheel {
+    inline-size: 330px;
+    block-size: 330px;
+  }
+  .wheel__arrow {
+    inline-size: 105px;
+    block-size: 122px;
+  }
+  .wheel__carousel {
+    background-size: 120%;
+  }
+  .wheel__item {
+    padding-block-start: 40px;
+  }
+  .wheel__center {
+    inline-size: 90px;
+    block-size: 90px;
+  }
+}

@@ -1,0 +1,18 @@
+:root {
+  --font: 'Geologica', Helvetica, Arial, sans-serif;
+
+  --text: normal 700 26px/1.2 var(--font);
+  --button: normal 700 32px/1.2 var(--font);
+  --modal: normal 700 40px/1.2 var(--font);
+
+  --text-primary-color: #FFFFFF;
+  --text-accent-color: #F5BA00;
+}
+
+@media (width < 768px) {
+  :root {
+    --text: normal 700 16px/1.2 var(--font);
+    --button: normal 700 22px/1.2 var(--font);
+    --modal: normal 700 26px/1.2 var(--font);
+  }
+}

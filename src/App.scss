@@ -1,0 +1,18 @@
+#root {
+  max-inline-size: 1440px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  block-size: 100%;
+  row-gap: 93px;
+  align-items: center;
+}
+
+
+@media (width < 768px) {
+  #root {
+    row-gap: auto;
+  }
+}

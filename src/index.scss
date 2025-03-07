@@ -1,0 +1,41 @@
+@import url("./../public/fonts/stylesheet.scss");
+@import url("./styles/variables.scss");
+
+body {
+  background-image: 
+    url('./assets/background.png'), 
+    linear-gradient(180deg, #295890, #323168);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font: var(--text);
+  margin: 0;
+  color: var(--text-primary-color, #FFFFFF);
+  text-transform: uppercase;
+  display: flex;
+  place-items: center;
+  min-inline-size: 375px;
+  min-block-size: 100vh;
+  block-size: 100%;  
+  padding-block: 60px 64px;
+  box-sizing: border-box;
+}
+
+img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.text-stroke {
+  background: linear-gradient(180deg, #490082 0%, #DB00FF 48%, #490082 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+}
+
+@media (width < 768px) {
+  body {
+    padding-block: 52px 40px;
+    block-size: 100vh;
+  }
+}
