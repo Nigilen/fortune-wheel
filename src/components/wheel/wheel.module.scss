@@ -28,7 +28,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  transition-duration: 10s;
+  transform: rotate(0deg);
+  transition-property: transform, font-size;
+  transition-duration: 10s, 0s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1.1);
 }
 
